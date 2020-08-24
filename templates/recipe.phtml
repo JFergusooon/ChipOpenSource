@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Chip n Cook
+        </title>
+        <link href='style.css' rel='stylesheet' />
+    </head>
+    <body>
+        <header>
+        <h1>Chip Recipes And More</h1>
+            <nav>
+                <ul>
+                    <a href = 'index.php'> <li> Home </li> </a>
+                    <a href = 'recipes.php'> <li> Recipes </li> </a>
+                    <a href = 'profile.php'> <li> Profile </li> </a>
+                    <a href = 'search.php'> <li> Search </li> </a>
+                </ul>
+            </nav>
+        </header>
+        <section>
+        {% for re in recipe %}
+            <div> 
+                <p>{{re.Title}}</p>
+                <p>{{re.recipeID}}</p>
+                <p>{{re.Ingredients}}</p>
+                <p>{{re.Instructions}}</p>
+                <p>{{re.MiscNotes}}</p>
+            </div>
+            {% endfor %}
+
+        </section>
+
+        <footer>
+            <p>Made by Team Chip &copy; Copyright 2020</p>
+            <p id="developers">Ashton Atkinson, Sawyer Benson, Cory Billing, Danny Doyle, Jeffrey Ferguson, Kayla Neumann <p>
+        </footer>
+    </body>
+</html>
